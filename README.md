@@ -10,6 +10,9 @@
 
 ``` bash
 
+git clone https://github.com/mind029/vue-unit-test.git
+
+cd vue-unit-test
 
 # install dependencies
 npm install
