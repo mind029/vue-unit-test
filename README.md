@@ -4,7 +4,11 @@
 
 `vue-cli` 脚手架工具创建新项目的时候，我们可以选择 创建包含单元测试 `karma && Mocha` 的项目。
 
+
+
 ## 快速预览
+
+![](https://ws2.sinaimg.cn/large/006tNc79ly1fqa9m8w868j31cm0xcak5.jpg)
 
 git clone 项目下来，然后查看 test 目录里面的测试代码
 
@@ -72,7 +76,7 @@ describe('# Demo组件 data 初始化数据测试', () => {
 })
 
 ```
-#### 示例2: 
+#### 示例2:
 
 `hook.spec.js` 对vue生命周期中的各个hook方法测试。
 
@@ -182,7 +186,7 @@ describe('# Demo组件 methods 测试', () => {
 
 ```
 
-#### 实例4 
+#### 实例4
 
 `filter.spec.js` 对 filters里面的过滤器进行测试
 
@@ -246,3 +250,20 @@ describe('# Demo组件 filters 测试', () => {
 6. [前端单元测试探索](https://segmentfault.com/a/1190000006933557)
 7. [vue单元测试](https://cn.vuejs.org/v2/guide/unit-testing.html)
 8. [Vue Test Utils](https://vue-test-utils.vuejs.org/zh-cn/)
+
+
+```
+"mocha.env": {
+  "API_TEST": true
+},
+"mocha.options": {
+  "compilers": {
+    "js": "babel-register"
+  }
+},
+"mocha.requires": [
+  "babel-register"
+],
+"mocha.files.glob": "test/api/*.js"
+
+```

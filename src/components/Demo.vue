@@ -14,6 +14,7 @@ export default {
   name: 'demo',
   created () {
     // console.log('created')
+    this.addCount()
   },
   beforeMount () {
     // console.log('beforeMount')

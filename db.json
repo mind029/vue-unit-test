@@ -1,0 +1,367 @@
+{
+  "posts": [{
+      "id": 1,
+      "title": "json-server",
+      "author": "typicode"
+    },
+    {
+      "id": 2,
+      "title": "json-server2",
+      "author": "typicode2",
+      "description": "这是描述"
+    }
+  ],
+  "comments": [{
+    "id": 1,
+    "body": "some comment",
+    "postId": 1
+  }],
+  "profile": {
+    "name": "typicode"
+  },
+  "userInfo": {
+    "id": 1,
+    "nickname": "mind",
+    "age": "未知",
+    "region": {
+      "province": "广西",
+      "city": "南宁"
+    },
+    "hobby": [{
+      "id": 1,
+      "name": "体育"
+    }, {
+      "id": 2,
+      "name": "变成"
+    }],
+    "createTime": 1523846503691,
+    "tags": ["开发", "前端", "JavaScript"],
+    "status": true
+  },
+  "webInfo": {
+    "id": 1,
+    "title": "api test 示例项目",
+    "status": true,
+    "createTime": 1523846676676,
+    "info": {
+      "description": "数据用于测试的",
+      "post": 10,
+      "nav": [{
+        "id": 1,
+        "name": "栏目1"
+      }, {
+        "id": 2,
+        "name": "栏目2"
+      }]
+    },
+    "developer": ["mind", "张三", "李四"],
+    "tags": [{
+      "id": 1,
+      "name": "前端"
+    }, {
+      "id": 2,
+      "name": "vuejs测试"
+    }],
+    "isNull": null
+  },
+  "schema": {
+    "postsList": {
+      "$id": "http://example.com/postsList.json",
+      "type": "array",
+      "items": {
+        "$id": "http://example.com/postsList.json/items",
+        "type": "object",
+        "properties": {
+          "id": {
+            "$id": "http://example.com/postsList.json/items/properties/id",
+            "type": "integer",
+            "default": 0
+          },
+          "title": {
+            "$id": "http://example.com/postsList.json/items/properties/title",
+            "type": "string",
+            "default": ""
+          },
+          "author": {
+            "$id": "http://example.com/postsList.json/items/properties/author",
+            "type": "string",
+            "default": ""
+          }
+        },
+        "required": [
+          "id",
+          "title"
+        ]
+      }
+    },
+    "postsDetail": {
+      "$id": "http://lixingchuxing.com/validation_postsDetail.json",
+      "type": "object",
+      "properties": {
+        "id": {
+          "$id": "/properties/id",
+          "type": "integer",
+          "default": 0
+        },
+        "title": {
+          "$id": "/properties/title",
+          "type": "string",
+          "default": ""
+        },
+        "author": {
+          "$id": "/properties/author",
+          "type": "string",
+          "default": ""
+        }
+      },
+      "required": [
+        "id",
+        "title"
+      ]
+    },
+    "commentsList": {
+      "$id": "http://lixingchuxing.com/validation_commentsList.json",
+      "type": "array",
+      "items": {
+        "$id": "http://lixingchuxing.com/validation_commentsList.json/items",
+        "type": "object",
+        "properties": {
+          "id": {
+            "$id": "http://lixingchuxing.com/validation_commentsList.json/items/properties/id",
+            "type": "integer",
+            "default": 0
+          },
+          "body": {
+            "$id": "http://lixingchuxing.com/validation_commentsList.json/items/properties/body",
+            "type": "string",
+            "default": ""
+          },
+          "postId": {
+            "$id": "http://lixingchuxing.com/validation_commentsList.json/items/properties/postId",
+            "type": "integer",
+            "default": 0
+          }
+        },
+        "required": [
+          "id",
+          "body",
+          "postId"
+        ]
+      }
+    },
+    "userInfo": {
+      "$id": "http://lixingchuxing.com/validation_userInfo.json",
+      "type": "object",
+      "properties": {
+        "id": {
+          "$id": "/properties/id",
+          "type": "integer",
+          "default": 0
+        },
+        "nickname": {
+          "$id": "/properties/nickname",
+          "type": "string",
+          "default": "",
+          "pattern": "^m.{3,10}"
+        },
+        "age": {
+          "$id": "/properties/age",
+          "type": "string",
+          "default": ""
+        },
+        "region": {
+          "$id": "/properties/region",
+          "type": "object",
+          "properties": {
+            "province": {
+              "$id": "/properties/region/properties/province",
+              "type": "string",
+              "default": ""
+            },
+            "city": {
+              "$id": "/properties/region/properties/city",
+              "type": "string",
+              "default": ""
+            }
+          }
+        },
+        "hobby": {
+          "$id": "/properties/hobby",
+          "type": "array",
+          "items": {
+            "$id": "/properties/hobby/items",
+            "type": "object",
+            "properties": {
+              "id": {
+                "$id": "/properties/hobby/items/properties/id",
+                "type": "integer",
+                "default": 0
+              },
+              "name": {
+                "$id": "/properties/hobby/items/properties/name",
+                "type": "string",
+                "default": ""
+              }
+            }
+          }
+        },
+        "createTime": {
+          "$id": "/properties/createTime",
+          "type": "integer",
+          "default": 0
+        },
+        "tags": {
+          "$id": "/properties/tags",
+          "type": "array",
+          "items": {
+            "$id": "/properties/tags/items",
+            "type": "string",
+            "default": ""
+          }
+        },
+        "status": {
+          "$id": "/properties/status",
+          "type": "boolean",
+          "default": false
+        }
+      },
+      "required": [
+        "id",
+        "nickname"
+      ]
+    },
+    "webInfo": {
+      "$id": "http://lixingchuxing.com/validation_webInfo.json",
+      "type": "object",
+      "properties": {
+        "id": {
+          "$id": "/properties/id",
+          "type": "integer",
+          "title": "The Id Schema ",
+          "default": 0
+        },
+        "title": {
+          "$id": "/properties/title",
+          "type": "string",
+          "title": "The Title Schema ",
+          "default": ""
+        },
+        "status": {
+          "$id": "/properties/status",
+          "type": "boolean",
+          "title": "The Status Schema ",
+          "default": false
+        },
+        "createTime": {
+          "$id": "/properties/createTime",
+          "type": "integer",
+          "title": "The Createtime Schema ",
+          "default": 0
+        },
+        "info": {
+          "$id": "/properties/info",
+          "type": "object",
+          "properties": {
+            "description": {
+              "$id": "/properties/info/properties/description",
+              "type": "string",
+              "title": "The Description Schema ",
+              "default": ""
+            },
+            "post": {
+              "$id": "/properties/info/properties/post",
+              "type": "integer",
+              "title": "The Post Schema ",
+              "default": 0
+            },
+            "nav": {
+              "$id": "/properties/info/properties/nav",
+              "type": "array",
+              "items": {
+                "$id": "/properties/info/properties/nav/items",
+                "type": "object",
+                "properties": {
+                  "id": {
+                    "$id": "/properties/info/properties/nav/items/properties/id",
+                    "type": "integer",
+                    "title": "The Id Schema ",
+                    "default": 0,
+                    "examples": [
+                      1
+                    ]
+                  },
+                  "name": {
+                    "$id": "/properties/info/properties/nav/items/properties/name",
+                    "type": "string",
+                    "title": "The Name Schema ",
+                    "default": "",
+                    "examples": [
+                      "栏目1"
+                    ]
+                  }
+                }
+              }
+            }
+          }
+        },
+        "developer": {
+          "$id": "/properties/developer",
+          "type": "array",
+          "items": {
+            "$id": "/properties/developer/items",
+            "type": "string",
+            "title": "The 0th Schema ",
+            "default": "",
+            "examples": [
+              "mind",
+              "张三",
+              "李四"
+            ]
+          }
+        },
+        "tags": {
+          "$id": "/properties/tags",
+          "type": "array",
+          "items": {
+            "$id": "/properties/tags/items",
+            "type": "object",
+            "properties": {
+              "id": {
+                "$id": "/properties/tags/items/properties/id",
+                "type": "integer",
+                "title": "The Id Schema ",
+                "default": 0,
+                "examples": [
+                  1
+                ]
+              },
+              "name": {
+                "$id": "/properties/tags/items/properties/name",
+                "type": "string",
+                "title": "The Name Schema ",
+                "default": "",
+                "examples": [
+                  "前端"
+                ]
+              }
+            }
+          }
+        },
+        "isNull": {
+          "$id": "/properties/isNull",
+          "type": "null",
+          "title": "The Isnull Schema ",
+          "default": null,
+          "examples": [
+            null
+          ]
+        }
+      },
+      "required": [
+        "id",
+        "title",
+        "status"
+      ]
+    }
+  }
+}
