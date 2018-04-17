@@ -6,11 +6,10 @@
 
 1. 系统不断迭代开发，前后端使用的api接口越来越多，比如上百个的时候，如果后期迭代改动，造成部分 `api` 返回的 数据跟预期 不一样了，如何知道？靠人力测试？ 就会影响到一些功能模块正常使用。
 2. 不能因为新迭代开发影响到前面已经做好的。
-3. 大量断言来判断相关字段
-4. 前后端不共用校验规则，可能校验规则不一致。
+3. 大量断言来判断相关字段
+4. 前后端不共用校验规则，可能校验规则不一致。
 
-
-**为了让项目更加稳健推荐做法：**
+**为了让项目更加稳健推荐做法：**
 
 1. 前端对后端api返回的json数据进行预期校验、检查必须字段、类型、格式等是否符合预期
 2. 后端api接口响应前，也对json数据进行预期校验、检查必须字段、类型、格式等是否符合预期
@@ -22,8 +21,8 @@
 
 为什么使用JSON-SCHEMA而不是自己写大量的 业务逻辑代码 来判断？
 
-1. 效率低下，因为后端返回数据字段繁多，手动校验相对较慢。
-2. 前后端不通用，JSON-SCHEMA因为是一种规范，所以可以做到前后端共用一套校验规则。
+1. 效率低下，因为后端返回数据字段繁多，手动校验相对较慢。
+2. 前后端不通用，JSON-SCHEMA因为是一种规范，所以可以做到前后端共用一套校验规则。
 
 ## （二）如何实施
 
@@ -449,13 +448,13 @@ describe('# 后端api Test', async function () {
 
 ## 可继续优化的地方
 
-1. 现在通过修改 api 校验规则的 json 文件。从而使新规则生效，不够直观。能够否做成 配置后台，操作更加便捷？
+1. 现在通过修改 api 校验规则的 json 文件。从而使新规则生效，不够直观。能够否做成 配置后台，操作更加便捷
 
-2. 直接暴露校验规则是否不够安全
+2. 直接暴露校验规则是否不够安全
 
 
 
-## 需要考虑的地方
+## 需要考虑的地方
 
 1. 开发是否有时间来写对应的测试用例。
 2. 数据校验会损失一部分性能，让程序比没有校验慢一点点，能否接受。
@@ -464,9 +463,9 @@ describe('# 后端api Test', async function () {
 ## 参考资料
 
 1. [Mocha测试框架](https://github.com/mochajs/mocha)
-2. [断言库 chai.js](https://github.com/chaijs/chai)
+2. [断言库 chai.js](https://github.com/chaijs/chai)
 3. [chai-json-schema-ajv](http://www.chaijs.com/plugins/chai-json-schema-ajv/)
-4. [JavaScript JSON-SCHEMA 校验库](https://github.com/epoberezkin/ajv)
+4. [JavaScript JSON-SCHEMA 校验库](https://github.com/epoberezkin/ajv)
 5. [通过 JSON 生成响应的 JSON-SCHEMA](https://jsonschema.net/)
 6. [mocha测试报告生成html文件](http://adamgruber.github.io/mochawesome/)
 7. [eslint-plugin-chai-friendly](eslint-plugin-chai-friendly)

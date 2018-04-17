@@ -10,7 +10,7 @@
 
 ![](https://ws2.sinaimg.cn/large/006tNc79ly1fqa9m8w868j31cm0xcak5.jpg)
 
-git clone 项目下来，然后查看 test 目录里面的测试代码
+git clone 项目下来，然后查看 test 目录里面的测试代码
 
 ``` bash
 
@@ -45,7 +45,7 @@ npm test
 2. 定义在 methods 方法是否可用
 3. filter是否可用
 4. 带有props的组件，数据能否正常传递
-5. 异步更新DOM的情况渲染的结果是否符合预期、比如 class、文字、属性等。
+5. 异步更新DOM的情况渲染的结果是否符合预期、比如 class、文字、属性等。
 6. 组件绑定事件是触发结构是否符合预期
 7. 子组件
 
@@ -224,6 +224,8 @@ describe('# Demo组件 filters 测试', () => {
 
 我们想要测试的 vue组件/模块 中的 代码尽可能按照 **单一职责原则**，这种模式来开发，这样才方便测试，举例
 
+详细实现可以查看  `vue-unit-test/src/pages/Home.vue`
+
 伪代码：
 
 ```javascript
@@ -261,7 +263,7 @@ export default {
 
 ```
 
-1. 把获取后端的数据的功能提取到 `getWebInfo()` 上
+1. 把获取后端的数据的功能提取到 `getWebInfo()` 上
 2. 把设置data，然后render 提取到 `setWebInfo(webInfo)` 上
 
 **这样我们在编写测试用例的时候即可利用我们的模拟数据**，调用 `setWebInfo(data)`，来检查我们 vue组件是否渲染正确。
