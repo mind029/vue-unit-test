@@ -267,6 +267,9 @@ export default {
 **这样我们在编写测试用例的时候即可利用我们的模拟数据**，调用 `setWebInfo(data)`，来检查我们 vue组件是否渲染正确。
 
 
+下一章：[基于JSON-SCHEMA对后端api进行测试](doc/基于JSON-SCHEMA对后端api进行测试.md)
+
+
 ## 参考资料
 
 多看别人怎么写测试用例，是最快的学习方法。
