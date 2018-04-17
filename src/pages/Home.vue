@@ -45,6 +45,9 @@ export default {
     this.webInfoLogic()
   },
   methods: {
+    // 这里还可以继续按照 单一职责模式 把一个获取数据设置到的data上的功能。拆分 Logic、getData、validate、setData
+    // 方便我们进行 单元测试 代码编写
+    // Logic 代码
     async webInfoLogic () {
       let webInfoData = await this.getWebInfo()
       // 判断是否 ajax 获取数据正常
@@ -56,6 +59,7 @@ export default {
         this.setWebInfo(webInfoData)
       }
     },
+    // ajax获取数据方法
     async getWebInfo () {
       let webInfoRes
       try {
@@ -67,6 +71,7 @@ export default {
       }
       return webInfoRes.data
     },
+    // 校验数据 是否符合 预期的方法
     async validateWebInfoData (webInfoData) {
       let schemaData = await this.$schema()
       // 判断是否有验证规则，没有的话就留空。相当于不验证
@@ -84,7 +89,7 @@ export default {
       // 返回验证结果、true/false
       return valid
     },
-    // 这里还可以继续按照 单一职责模式 继续拆分成 。验证方法、设置 data的方法。
+    // 设置 data，渲染页面的方法。
     async setWebInfo (webInfoData) {
       let start = Date.now()
       this.webInfo = webInfoData

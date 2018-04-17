@@ -16,9 +16,10 @@ describe('# 后端api Test', async function () {
   })
 
   describe('# /postsList 接口相关测试', function () {
-    it('# 状态码 是否为200', async function () {
+    it('# /postsList 状态码正常 为200 或 304', async function () {
       let result = await dataApi.postsList()
-      expect(result.status).to.equal(200)
+      let status = !!((result.status === 200 || result.status === 304))
+      expect(status).to.equal(true)
     })
 
     it('# 返回数据是否符合预期JSON-SCHEMA', async () => {
