@@ -11,7 +11,7 @@
     "test": "npm run unit",
     "lint": "eslint --ext .js,.vue src test/unit",
     "fix": "eslint --fix .js,.vue src test/unit",
-    "api-test": "API_TEST=true mocha  test/api/*   --compilers js:babel-core/register --reporter mochawesome",
+    "api-test": "cross-env API_TEST=true mocha  test/api/*   --compilers js:babel-core/register --reporter mochawesome",
     "build": "node build/build.js"
   },
   "dependencies": {
