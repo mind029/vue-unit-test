@@ -43,9 +43,9 @@
 
 ### 前端如何整合
 
-1. 前端项目最好使用 `axios` ，`superagent` 等前后端 前后端通过 http 请求库。这样我们在 `api` 测试过程中共用 项目中已经配好的 api 接口请求信息。
+1. 前端项目最好使用 `axios` ，`superagent` 等前后端 前后端通过 http 请求库。这样我们在 `api` 测试过程中共用 项目中已经配好的 api 接口请求信息。
 
-2. 利用 mocha、chai、ajv、jsonschema规则 来测试我们的 api。
+2. 利用 mocha、chai、ajv、jsonschema规则 来测试我们的 api。
 
 #### 步骤1：安装相关依赖包
 
