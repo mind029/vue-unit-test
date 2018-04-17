@@ -43,7 +43,7 @@
 
 ### 前端如何整合
 
-1. 前端项目最好使用 `axios` ，`superagent` 等前后端 前后端通过 http 请求库。这样我们在 `api` 测试过程中共用 项目中已经配好的 api 接口请求信息。
+1. 前端项目最好使用 `axios` ，`superagent` 等前后端通用的 http请求库。这样我们在 `api` 测试过程中共用 项目中已经配好的 api 接口请求信息。
 
 2. 利用 mocha、chai、ajv、jsonschema规则 来测试我们的 api。
 
@@ -56,15 +56,15 @@
 
 3. 安装 断言库 [chai.js](https://github.com/chaijs/chai)，终端输入 `npm install chai --save-dev`
 
-4. 安装 chai.js 的 [chai-json-schema-ajv](http://www.chaijs.com/plugins/chai-json-schema-ajv/) 插件，用于支持 `JSON-SCHEMA` 校验 ，终端输入：`npm install chai-json-schema-ajv --save-dev`
+4. 安装 chai.js 的 [chai-json-schema-ajv](http://www.chaijs.com/plugins/chai-json-schema-ajv/) 插件，用于支持 `JSON-SCHEMA` 校验 ，终端输入：`npm install chai-json-schema-ajv --save-dev`
 
-5. 安装 json验证器 [ajv](https://github.com/epoberezkin/ajv)，在终端输入 ：`npm install ajv --save-dev`。
+5. 安装 json验证器 [ajv](https://github.com/epoberezkin/ajv)，在终端输入 ：`npm install ajv --save-dev`。
 
-6. （可选）安装 [json-server](https://github.com/typicode/json-server) 提供 模拟api，真是环境我们用自己后端api即可。
+6. （可选）安装 [json-server](https://github.com/typicode/json-server) 提供 模拟api，真是环境我们用自己后端api即可。
 
-7. （可选）安装 Eslint支持chai.js 语法插件， [eslint-plugin-chai-friendly](https://github.com/ihordiachenko/eslint-plugin-chai-friendly)，在终端输入：`npm install eslint-plugin-chai-friendly --save-dev`，详细设置请访问链接查看。
+7. （可选）安装 Eslint支持chai.js 语法插件， [eslint-plugin-chai-friendly](https://github.com/ihordiachenko/eslint-plugin-chai-friendly)，在终端输入：`npm install eslint-plugin-chai-friendly --save-dev`，详细设置请访问链接查看。
 
-#### 步骤2：改造api接口增加环境变量，用于判断是API测试、还是本地 AJAX 调用
+#### 步骤2：改造api接口增加环境变量，用于判断是API测试、还是本地 AJAX 调用
 
 
 `vue-unit-test/src/api/data.js` 页面代码增加 环境变量判断
@@ -80,7 +80,7 @@ let instance = axios.create({
 ```
 
 
-#### 步骤3：在test文件夹增加 api 测试 脚本代码
+#### 步骤3：在test文件夹增加 api 测试 脚本代码
 
 1. 从后端api接口获取schema数据，得到各个api个验证规则
 2. 验证api返回数据 是否符合 预期数据
@@ -176,7 +176,7 @@ describe('# 后端api Test', async function () {
 ```
 
 
-#### 步骤5：为后端 api 生成 jsonschema 校验规则
+#### 步骤5：为后端 api 生成 jsonschema 校验规则
 
 网站 https://jsonschema.net/ ，可以通过复制json 进去，直接生成相应的 jsonschema 校验规则。
 
