@@ -4,8 +4,12 @@ import Vue from 'vue'
 import App from './App'
 import router from './router'
 import dataApi from '@/api/data'
+// https://github.com/epoberezkin/ajv
 import Ajv from 'ajv'
 Vue.config.productionTip = false
+
+// 页面加载进来第一次先清除掉之前的规则。
+localStorage.removeItem('schema')
 
 /**
  * 获取通过api获取后端jsonchema数据

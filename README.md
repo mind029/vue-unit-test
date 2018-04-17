@@ -220,21 +220,51 @@ describe('# Demo组件 filters 测试', () => {
 
 
 ```
+### 编写可测试的vue 组件/模块
 
-#### 更多实例
+我们想要测试的 vue组件/模块 中的 代码尽可能按照 **单一职责原则**，这种模式来开发，这样才方便测试，举例
 
-等待更新中……
+伪代码：
 
+```javascript
 
-## api自动化测试
+import dataApi from '@/api/data'
+export default {
+  name: 'api',
+  created () {
+    this.initData()
+  },
+  data () {
+    return {
+      webInfo: {}
+    }
+  },
+  methods: {
+    // 初始化数据
+    async initData () {
+      let webInfoData = await this.getWebInfo()
+      this.setWebInfo(webInfoData)
+    },
+    // 获取数据 写 在一个方法上
+    async getWebInfo () {
+     let result = await dataApi.webInfo()
+     return result.data
+    },
+    // 设置数据到 data 上。
+    async setWebInfo (webInfo) {
+      // 对 webInfo 进行相关数据校验
+      // 设置数据到data上，然后vue自动渲染更新html
+      this.webInfo = webInfo
+    }
+  }
+}
 
-等待更新中……
+```
 
-## 端到端自动化测试
+1. 把获取后端的数据的功能提取到 `getWebInfo()` 上
+2. 把设置data，然后render 提取到 `setWebInfo(webInfo)` 上
 
-等待更新中……
-
-
+**这样我们在编写测试用例的时候即可利用我们的模拟数据**，调用 `setWebInfo(data)`，来检查我们 vue组件是否渲染正确。
 
 
 ## 参考资料
@@ -250,20 +280,4 @@ describe('# Demo组件 filters 测试', () => {
 6. [前端单元测试探索](https://segmentfault.com/a/1190000006933557)
 7. [vue单元测试](https://cn.vuejs.org/v2/guide/unit-testing.html)
 8. [Vue Test Utils](https://vue-test-utils.vuejs.org/zh-cn/)
-
-
-```
-"mocha.env": {
-  "API_TEST": true
-},
-"mocha.options": {
-  "compilers": {
-    "js": "babel-register"
-  }
-},
-"mocha.requires": [
-  "babel-register"
-],
-"mocha.files.glob": "test/api/*.js"
-
-```
+9. 《JavaScript设计模式与开发实践》

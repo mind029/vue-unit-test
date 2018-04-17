@@ -5,9 +5,9 @@
     "passes": 8,
     "pending": 0,
     "failures": 0,
-    "start": "2018-04-16T15:48:19.643Z",
-    "end": "2018-04-16T15:48:19.762Z",
-    "duration": 119,
+    "start": "2018-04-17T03:00:39.194Z",
+    "end": "2018-04-17T03:00:39.323Z",
+    "duration": 129,
     "testsRegistered": 8,
     "passPercent": 100,
     "pendingPercent": 0,
@@ -19,7 +19,7 @@
     "pendingPercentClass": "danger"
   },
   "suites": {
-    "uuid": "15fc8493-cf15-4a6a-9647-4d0af70841fa",
+    "uuid": "fb759de6-49ae-42d3-9fc4-330f8d2a92ce",
     "title": "",
     "fullFile": "",
     "file": "",
@@ -28,7 +28,7 @@
     "tests": [],
     "suites": [
       {
-        "uuid": "4c362f7c-e2fb-4158-b218-ffca0b2ae6bc",
+        "uuid": "df76eeec-f29a-4e76-9217-35e4ceebe10a",
         "title": "# 后端api Test",
         "fullFile": "/Users/mind/development/code/JavaScript/Github/vue-unit-test/test/api/data.spec.js",
         "file": "/test/api/data.spec.js",
@@ -37,14 +37,14 @@
             "title": "\"before all\" hook",
             "fullTitle": "# 后端api Test \"before all\" hook",
             "timedOut": false,
-            "duration": 27,
+            "duration": 43,
             "pass": false,
             "fail": false,
             "pending": false,
             "code": "var gen = fn.apply(this, arguments);\nreturn new _promise2.default(function (resolve, reject) {\n  function step(key, arg) {\n    try {\n      var info = gen[key](arg);\n      var value = info.value;\n    } catch (error) {\n      reject(error);\n      return;\n    }\n    if (info.done) {\n      resolve(value);\n    } else {\n      return _promise2.default.resolve(value).then(function (value) {\n        step(\"next\", value);\n      }, function (err) {\n        step(\"throw\", err);\n      });\n    }\n  }\n  return step(\"next\");\n});",
             "err": {},
             "isRoot": false,
-            "uuid": "1989e8b6-1829-4c26-96b6-231e81ab7334",
+            "uuid": "5a03b4e2-cfac-48a4-8c03-d6fbacccb765",
             "isHook": true,
             "skipped": false
           }
@@ -53,7 +53,7 @@
         "tests": [],
         "suites": [
           {
-            "uuid": "7b7a8a8d-3858-4710-b1b8-027839655991",
+            "uuid": "febfc2a9-365a-45b9-8ebf-f41428e47e8b",
             "title": "# /postsList 接口相关测试",
             "fullFile": "/Users/mind/development/code/JavaScript/Github/vue-unit-test/test/api/data.spec.js",
             "file": "/test/api/data.spec.js",
@@ -73,7 +73,7 @@
                 "code": "var gen = fn.apply(this, arguments);\nreturn new _promise2.default(function (resolve, reject) {\n  function step(key, arg) {\n    try {\n      var info = gen[key](arg);\n      var value = info.value;\n    } catch (error) {\n      reject(error);\n      return;\n    }\n    if (info.done) {\n      resolve(value);\n    } else {\n      return _promise2.default.resolve(value).then(function (value) {\n        step(\"next\", value);\n      }, function (err) {\n        step(\"throw\", err);\n      });\n    }\n  }\n  return step(\"next\");\n});",
                 "err": {},
                 "isRoot": false,
-                "uuid": "33cb8890-162e-4dc3-b834-a51768e93b11",
+                "uuid": "d3cac980-2a5a-499f-81c6-deb603308a89",
                 "isHook": false,
                 "skipped": false
               },
@@ -81,7 +81,7 @@
                 "title": "# 返回数据是否符合预期JSON-SCHEMA",
                 "fullTitle": "# 后端api Test # /postsList 接口相关测试 # 返回数据是否符合预期JSON-SCHEMA",
                 "timedOut": false,
-                "duration": 35,
+                "duration": 33,
                 "state": "passed",
                 "speed": "fast",
                 "pass": true,
@@ -90,26 +90,26 @@
                 "code": "var gen = fn.apply(this, arguments);\nreturn new _promise2.default(function (resolve, reject) {\n  function step(key, arg) {\n    try {\n      var info = gen[key](arg);\n      var value = info.value;\n    } catch (error) {\n      reject(error);\n      return;\n    }\n    if (info.done) {\n      resolve(value);\n    } else {\n      return _promise2.default.resolve(value).then(function (value) {\n        step(\"next\", value);\n      }, function (err) {\n        step(\"throw\", err);\n      });\n    }\n  }\n  return step(\"next\");\n});",
                 "err": {},
                 "isRoot": false,
-                "uuid": "3833fffb-5eec-46b1-b527-be0992049c2f",
+                "uuid": "67324b93-97d9-440a-ac43-e80934ebe961",
                 "isHook": false,
                 "skipped": false
               }
             ],
             "suites": [],
             "passes": [
-              "33cb8890-162e-4dc3-b834-a51768e93b11",
-              "3833fffb-5eec-46b1-b527-be0992049c2f"
+              "d3cac980-2a5a-499f-81c6-deb603308a89",
+              "67324b93-97d9-440a-ac43-e80934ebe961"
             ],
             "failures": [],
             "pending": [],
             "skipped": [],
-            "duration": 41,
+            "duration": 39,
             "root": false,
             "rootEmpty": false,
             "_timeout": 2000
           },
           {
-            "uuid": "2a561d75-625f-4fb5-9680-701612888e64",
+            "uuid": "ecdecc8d-9839-48a0-bde7-a5c63711d8a5",
             "title": "# /postsDetail",
             "fullFile": "/Users/mind/development/code/JavaScript/Github/vue-unit-test/test/api/data.spec.js",
             "file": "/test/api/data.spec.js",
@@ -117,10 +117,10 @@
             "afterHooks": [],
             "tests": [
               {
-                "title": "# /postsDetail状态码 是否为200",
-                "fullTitle": "# 后端api Test # /postsDetail # /postsDetail状态码 是否为200",
+                "title": "# /postsDetail状态码正常 为200 或 304",
+                "fullTitle": "# 后端api Test # /postsDetail # /postsDetail状态码正常 为200 或 304",
                 "timedOut": false,
-                "duration": 6,
+                "duration": 8,
                 "state": "passed",
                 "speed": "fast",
                 "pass": true,
@@ -129,7 +129,7 @@
                 "code": "var gen = fn.apply(this, arguments);\nreturn new _promise2.default(function (resolve, reject) {\n  function step(key, arg) {\n    try {\n      var info = gen[key](arg);\n      var value = info.value;\n    } catch (error) {\n      reject(error);\n      return;\n    }\n    if (info.done) {\n      resolve(value);\n    } else {\n      return _promise2.default.resolve(value).then(function (value) {\n        step(\"next\", value);\n      }, function (err) {\n        step(\"throw\", err);\n      });\n    }\n  }\n  return step(\"next\");\n});",
                 "err": {},
                 "isRoot": false,
-                "uuid": "dac3564b-62dc-4a42-8a08-c87250e8909d",
+                "uuid": "fb6431b5-f0fa-4408-a2e7-91768d416537",
                 "isHook": false,
                 "skipped": false
               },
@@ -146,26 +146,26 @@
                 "code": "var gen = fn.apply(this, arguments);\nreturn new _promise2.default(function (resolve, reject) {\n  function step(key, arg) {\n    try {\n      var info = gen[key](arg);\n      var value = info.value;\n    } catch (error) {\n      reject(error);\n      return;\n    }\n    if (info.done) {\n      resolve(value);\n    } else {\n      return _promise2.default.resolve(value).then(function (value) {\n        step(\"next\", value);\n      }, function (err) {\n        step(\"throw\", err);\n      });\n    }\n  }\n  return step(\"next\");\n});",
                 "err": {},
                 "isRoot": false,
-                "uuid": "504ccc14-83ec-484f-aa86-a2fb4076d6d3",
+                "uuid": "2ac7ba16-9c5c-46a8-b30b-43c585c0abbd",
                 "isHook": false,
                 "skipped": false
               }
             ],
             "suites": [],
             "passes": [
-              "dac3564b-62dc-4a42-8a08-c87250e8909d",
-              "504ccc14-83ec-484f-aa86-a2fb4076d6d3"
+              "fb6431b5-f0fa-4408-a2e7-91768d416537",
+              "2ac7ba16-9c5c-46a8-b30b-43c585c0abbd"
             ],
             "failures": [],
             "pending": [],
             "skipped": [],
-            "duration": 11,
+            "duration": 13,
             "root": false,
             "rootEmpty": false,
             "_timeout": 2000
           },
           {
-            "uuid": "97028257-e0da-46ae-9466-0feb73f64dde",
+            "uuid": "653ed2be-4716-46db-a104-1c047c48bfa4",
             "title": "# /commentsList",
             "fullFile": "/Users/mind/development/code/JavaScript/Github/vue-unit-test/test/api/data.spec.js",
             "file": "/test/api/data.spec.js",
@@ -173,10 +173,10 @@
             "afterHooks": [],
             "tests": [
               {
-                "title": "# /commentsList状态码 是否为200",
-                "fullTitle": "# 后端api Test # /commentsList # /commentsList状态码 是否为200",
+                "title": "# /commentsList状态码正常 为200 或 304",
+                "fullTitle": "# 后端api Test # /commentsList # /commentsList状态码正常 为200 或 304",
                 "timedOut": false,
-                "duration": 3,
+                "duration": 5,
                 "state": "passed",
                 "speed": "fast",
                 "pass": true,
@@ -185,7 +185,7 @@
                 "code": "var gen = fn.apply(this, arguments);\nreturn new _promise2.default(function (resolve, reject) {\n  function step(key, arg) {\n    try {\n      var info = gen[key](arg);\n      var value = info.value;\n    } catch (error) {\n      reject(error);\n      return;\n    }\n    if (info.done) {\n      resolve(value);\n    } else {\n      return _promise2.default.resolve(value).then(function (value) {\n        step(\"next\", value);\n      }, function (err) {\n        step(\"throw\", err);\n      });\n    }\n  }\n  return step(\"next\");\n});",
                 "err": {},
                 "isRoot": false,
-                "uuid": "f95e1f75-988c-49d3-956e-6f63b27d2f20",
+                "uuid": "8a1ab441-f312-4428-8247-0756bcb055ff",
                 "isHook": false,
                 "skipped": false
               },
@@ -193,7 +193,7 @@
                 "title": "# /commentsList返回数据是否符合预期JSON-SCHEMA",
                 "fullTitle": "# 后端api Test # /commentsList # /commentsList返回数据是否符合预期JSON-SCHEMA",
                 "timedOut": false,
-                "duration": 8,
+                "duration": 5,
                 "state": "passed",
                 "speed": "fast",
                 "pass": true,
@@ -202,26 +202,26 @@
                 "code": "var gen = fn.apply(this, arguments);\nreturn new _promise2.default(function (resolve, reject) {\n  function step(key, arg) {\n    try {\n      var info = gen[key](arg);\n      var value = info.value;\n    } catch (error) {\n      reject(error);\n      return;\n    }\n    if (info.done) {\n      resolve(value);\n    } else {\n      return _promise2.default.resolve(value).then(function (value) {\n        step(\"next\", value);\n      }, function (err) {\n        step(\"throw\", err);\n      });\n    }\n  }\n  return step(\"next\");\n});",
                 "err": {},
                 "isRoot": false,
-                "uuid": "ab1e7e0c-9f25-4c84-9d2b-f89d379acbb9",
+                "uuid": "c24ab1c3-a38e-4ad9-80c7-c217c501e30d",
                 "isHook": false,
                 "skipped": false
               }
             ],
             "suites": [],
             "passes": [
-              "f95e1f75-988c-49d3-956e-6f63b27d2f20",
-              "ab1e7e0c-9f25-4c84-9d2b-f89d379acbb9"
+              "8a1ab441-f312-4428-8247-0756bcb055ff",
+              "c24ab1c3-a38e-4ad9-80c7-c217c501e30d"
             ],
             "failures": [],
             "pending": [],
             "skipped": [],
-            "duration": 11,
+            "duration": 10,
             "root": false,
             "rootEmpty": false,
             "_timeout": 2000
           },
           {
-            "uuid": "8146735d-f94e-4966-9889-d5f14ec5edce",
+            "uuid": "0b73bf4d-fe01-4ee4-bfa9-5b7491371e12",
             "title": "# /userInfo",
             "fullFile": "/Users/mind/development/code/JavaScript/Github/vue-unit-test/test/api/data.spec.js",
             "file": "/test/api/data.spec.js",
@@ -232,7 +232,7 @@
                 "title": "# /userInfo状态码 是否为200",
                 "fullTitle": "# 后端api Test # /userInfo # /userInfo状态码 是否为200",
                 "timedOut": false,
-                "duration": 3,
+                "duration": 2,
                 "state": "passed",
                 "speed": "fast",
                 "pass": true,
@@ -241,7 +241,7 @@
                 "code": "var gen = fn.apply(this, arguments);\nreturn new _promise2.default(function (resolve, reject) {\n  function step(key, arg) {\n    try {\n      var info = gen[key](arg);\n      var value = info.value;\n    } catch (error) {\n      reject(error);\n      return;\n    }\n    if (info.done) {\n      resolve(value);\n    } else {\n      return _promise2.default.resolve(value).then(function (value) {\n        step(\"next\", value);\n      }, function (err) {\n        step(\"throw\", err);\n      });\n    }\n  }\n  return step(\"next\");\n});",
                 "err": {},
                 "isRoot": false,
-                "uuid": "3fd32b99-8aa4-4147-8136-6c2d58fb45cf",
+                "uuid": "f4dc6a3e-f9c0-4d95-a81b-c91914d9841d",
                 "isHook": false,
                 "skipped": false
               },
@@ -249,7 +249,7 @@
                 "title": "# /userInfo返回数据是否符合预期JSON-SCHEMA",
                 "fullTitle": "# 后端api Test # /userInfo # /userInfo返回数据是否符合预期JSON-SCHEMA",
                 "timedOut": false,
-                "duration": 10,
+                "duration": 9,
                 "state": "passed",
                 "speed": "fast",
                 "pass": true,
@@ -258,20 +258,20 @@
                 "code": "var gen = fn.apply(this, arguments);\nreturn new _promise2.default(function (resolve, reject) {\n  function step(key, arg) {\n    try {\n      var info = gen[key](arg);\n      var value = info.value;\n    } catch (error) {\n      reject(error);\n      return;\n    }\n    if (info.done) {\n      resolve(value);\n    } else {\n      return _promise2.default.resolve(value).then(function (value) {\n        step(\"next\", value);\n      }, function (err) {\n        step(\"throw\", err);\n      });\n    }\n  }\n  return step(\"next\");\n});",
                 "err": {},
                 "isRoot": false,
-                "uuid": "bb269b66-1263-4f31-a52c-52ce81070bdb",
+                "uuid": "55e8b37e-8ba6-4a78-90fb-b1076c14d03c",
                 "isHook": false,
                 "skipped": false
               }
             ],
             "suites": [],
             "passes": [
-              "3fd32b99-8aa4-4147-8136-6c2d58fb45cf",
-              "bb269b66-1263-4f31-a52c-52ce81070bdb"
+              "f4dc6a3e-f9c0-4d95-a81b-c91914d9841d",
+              "55e8b37e-8ba6-4a78-90fb-b1076c14d03c"
             ],
             "failures": [],
             "pending": [],
             "skipped": [],
-            "duration": 13,
+            "duration": 11,
             "root": false,
             "rootEmpty": false,
             "_timeout": 2000

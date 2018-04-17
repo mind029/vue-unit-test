@@ -28,9 +28,10 @@ describe('# 后端api Test', async function () {
   })
 
   describe('# /postsDetail', function () {
-    it('# /postsDetail状态码 是否为200', async function () {
+    it('# /postsDetail状态码正常 为200 或 304', async function () {
       let result = await dataApi.postsDetail({id: 1})
-      expect(result.status).to.equal(200)
+      let status = !!((result.status === 200 || result.status === 304))
+      expect(status).to.equal(true)
     })
 
     it('# /postsDetail返回数据是否符合预期JSON-SCHEMA', async () => {
@@ -40,9 +41,10 @@ describe('# 后端api Test', async function () {
   })
 
   describe('# /commentsList', function () {
-    it('# /commentsList状态码 是否为200', async function () {
+    it('# /commentsList状态码正常 为200 或 304', async function () {
       let result = await dataApi.commentsList()
-      expect(result.status).to.equal(200)
+      let status = !!((result.status === 200 || result.status === 304))
+      expect(status).to.equal(true)
     })
 
     it('# /commentsList返回数据是否符合预期JSON-SCHEMA', async () => {
@@ -55,7 +57,8 @@ describe('# 后端api Test', async function () {
   describe('# /userInfo', function () {
     it('# /userInfo状态码 是否为200', async function () {
       let result = await dataApi.userInfo()
-      expect(result.status).to.equal(200)
+      let status = !!((result.status === 200 || result.status === 304))
+      expect(status).to.equal(true)
     })
 
     it('# /userInfo返回数据是否符合预期JSON-SCHEMA', async () => {
