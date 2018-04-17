@@ -191,7 +191,7 @@ describe('# 后端api Test', async function () {
 等，更多可以查看详细 http://json-schema.org/
 
 
-#### 步骤5：启动 json-server 提供模拟 api
+#### 步骤6：启动 json-server 提供模拟 api
 
 这里我们使用本地模拟数据，有后端 api跳过
 
@@ -438,7 +438,7 @@ describe('# 后端api Test', async function () {
 ```
 
 
-#### 步骤6：运行 mocha 测试后端api
+#### 步骤7：运行 mocha 测试后端api
 
 运行 mocha 命令：`npm run api-test`
 
