@@ -1,5 +1,7 @@
 # 基于JSON-SCHEMA对后端api进行测试
 
+推荐先看[vue单元测试](../README.md)这篇文章
+
 现在很多项目都是前后端分离的项目，大部分数据都是通过后端 `api` 通过返回 `JSON` 数据，然后前端对数据进行各类处理，大部分情况下，前后端 很少对 `api` 返回的数据进行数据校验，比如 必须字段、格式、类型等。后期如果 后端 `api` 接口返回格式变动了，如果没有 校验、那么 前端 `JavaScript` 业务逻辑代码很可能出错，但我们却没做任何错误处理，用户看到页面出现异常，体验极差。
 
 **痛点分析**
@@ -39,7 +41,7 @@
 
 大部分web服务器程序都能够对后端api响应内容进行处理，我们在这一层进行对 api 数据 校验整合 ， 这样对后端影响最小。
 
-比如基于 `nginx+lua` 或 `openresty` 的做web服务器的， 在请求生命周期 hook 中的  `body_filter_by_lua` 阶段进行数据处理。详细实现，后面深入做完相关测试后再分享，不在这篇文章。
+比如基于 `nginx+lua` 或 `openresty` 的做web服务器的， 在请求生命周期 hook 中的  `body_filter_by_lua` 阶段进行数据处理。详细实现，后面深入做完相关测试后再分享，不在这篇文章。
 
 ### 前端如何整合
 
@@ -56,7 +58,7 @@
 
 3. 安装 断言库 [chai.js](https://github.com/chaijs/chai)，终端输入 `npm install chai --save-dev`
 
-4. 安装 chai.js 的 [chai-json-schema-ajv](http://www.chaijs.com/plugins/chai-json-schema-ajv/) 插件，用于支持 `JSON-SCHEMA` 校验 ，终端输入：`npm install chai-json-schema-ajv --save-dev`
+4. 安装 chai.js 的 [chai-json-schema-ajv](http://www.chaijs.com/plugins/chai-json-schema-ajv/) 插件，用于支持 `JSON-SCHEMA` 校验 ，终端输入：`npm install chai-json-schema-ajv --save-dev`
 
 5. 安装 json验证器 [ajv](https://github.com/epoberezkin/ajv)，在终端输入 ：`npm install ajv --save-dev`。
 
