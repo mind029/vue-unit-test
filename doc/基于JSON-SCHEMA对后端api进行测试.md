@@ -180,22 +180,22 @@ describe('# 后端api Test', async function () {
 
 网站 https://jsonschema.net/ ，可以通过复制json 进去，直接生成相应的 jsonschema 校验规则。
 
-**常用的判断**
+**常用的判断**
 
 除了比较结构和类型外，我们还可以详细比较，
 
-1. 字段是否必须
-2. 数字范围
-3. 字符串可以使用正则
-4. 默认值
+1. 字段是否必须
+2. 数字范围
+3. 字符串可以使用正则
+4. 默认值
 等，更多可以查看详细 http://json-schema.org/
 
 
 #### 步骤5：启动 json-server 提供模拟 api
 
-这里我们使用本地模拟数据，有后端 api跳过
+这里我们使用本地模拟数据，有后端 api跳过
 
-`db.json` 文件 配置了模拟api 数据，启动 json-sevrer后就会生成相应的 http 接口。
+`db.json` 文件 配置了模拟 api 数据，启动 json-sevrer后就会生成相应的 http 接口。
 
 
 启动 `json-server` 提供模拟数据，在项目的 根目录运行：`json-server db.json`
@@ -438,17 +438,17 @@ describe('# 后端api Test', async function () {
 ```
 
 
-#### 步骤6：运行 mocha 测试后端api
+#### 步骤6：运行 mocha 测试后端api
 
 运行 mocha 命令：`npm run api-test`
 
-终端控制台会输出响应的日志文件，然后 在 `mochawesome` 文件夹，会生成相关的 `html` 文件
+终端控制台会输出响应的日志文件，然后在 `mochawesome` 文件夹，会生成相关的 `html` 文件
 
 
 
-## 可继续优化的地方
+## 可继续优化的地方
 
-1. 现在通过修改 api 校验规则的 json 文件。从而使新规则生效，不够直观。能够否做成 配置后台，操作更加便捷
+1. 现在通过修改api 校验规则的 json 文件。从而使新规则生效，不够直观。能够否做成 配置后台，操作更加便捷
 
 2. 直接暴露校验规则是否不够安全
 
